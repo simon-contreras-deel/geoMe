@@ -1,0 +1,5 @@
+html, body {height: 100%; margin: 0; padding: 0;}
+.c {text-align:center;}
+#save, #see {height: 100%;}
+#saveContent, #seeContent {height: 90%; overflow: hidden;padding:0;}
+#map_canvas, #map_canvas2 {height: 100%;color:#333;text-shadow: none;}

@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html manifest="cache.manifest">
+  <head>
+    <title>geoMe</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Simon Martín - @oleurud">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="geoMe. Save a place easily" />
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+    <link rel="stylesheet" href="css/jquery.toastmessage.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/jquery.toastmessage.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+<body> 
+
+<div data-role="page" id="home" data-theme="a">
+
+  <div data-role="header">
+    <h1>geoMe</h1>
+  </div>
+
+  <div data-role="content">
+    <h3 class="c">Save a place easily</h3>
+    <a id="savePosition" href="#save" data-role="button" data-transition="slide" data-icon="check" data-theme="b">Save place</a>
+    <a id="seePosition" href="#see" data-role="button" data-transition="flip" data-icon="search" data-theme="b">Load saved place</a>
+    <br /><br /><br /><br /><br />
+    <a href="#about" data-role="button" data-transition="slideup" data-icon="info">About</a>
+  </div>
+</div>
+
+<div id="save" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>geoMe</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext" data-rel="back" data-direction="reverse">Home</a>
+    <a id="savePos" data-role="button" data-theme="b">Save</a>
+  </div>
+
+  <div id="saveContent" data-role="content"> 
+    <div>
+    </div>
+    <div id="map_canvas"></div>
+  </div>
+</div>
+
+
+<div id="see" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>geoMe</h1>
+    <a href="index.html" data-icon="home" data-iconpos="notext" data-rel="back">Home</a>
+    <a id="toggleSV" data-role="button" data-theme="b">Street View</a>
+  </div>
+
+  <div id="seeContent" data-role="content">
+    <div id="map_canvas2"></div>
+  </div>
+</div>
+
+
+<div id="about" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>About geoMe</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext" data-rel="back" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role="content"> 
+    <p>geoMe is a small webApp that allows you to save a geopositionated place. Nothing more.</p>
+    <p>Instructions:</p>
+    <p><strong>1) Save a place:</strong> Tap on <i>Save place</i>. When you are geopositionated, tap on the <i>save</i> button (top and rigth corner)</p>
+    <p><strong>2) See the saved place:</strong> Tap on <i>Load saved place</i>. You can see the place on the map or on the Google Street View</p>
+    <p>This developed by <a href="http://simonmartin.eu/" target="_blank">Simon Martin</a> for the sole purpose of develop a small webApp based HTML5 and PhoneGap. And why not admit it, remember where I left my car (ouch!).</p>
+    <p>geoMe uses: HTML5 based geolocation, Google Maps, HTML5 local storage, Jquery Mobile and HTML5 based cache. Feel free to use the code.</p>
+    <p class="c"><img src="css/images/html5.png"></p>
+  </div>
+</div>
+
+</body>
+</html>
